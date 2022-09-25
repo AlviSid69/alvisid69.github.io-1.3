@@ -20,7 +20,7 @@ body {
     min-width: 320px;
     font-size: 14px;
     overflow: hidden;
-    font-family: "TT Lakes", "sans-serif";
+    font-family: "TT Lakes", sans-serif;
 }
 
 .header {
@@ -54,7 +54,7 @@ body {
 }
 
 .caption__main {
-    font-family: "TT Lakes bold", "sans-serif";
+    font-family: "TT Lakes bold", sans-serif;
     font-size: 28px;
     line-height: 40px;
     padding-left: 12px;
