@@ -28,7 +28,6 @@ body {
 .aside {
     max-width: 320px;
     min-height: 1024px;
-    outline: 1px solid red;
     box-shadow: -2px 0 4px rgba(69, 79, 126, 0.02), 16px 0 52px rgba(14, 24, 80, 0.2);
     font-family: "TT Lakes", sans-serif;
 }
