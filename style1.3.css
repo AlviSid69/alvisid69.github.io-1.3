@@ -19,7 +19,8 @@ body {
     margin: 0;
     min-width: 320px;
     font-size: 14px;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
     font-family: "TT Lakes", sans-serif;
 }
 
@@ -130,6 +131,130 @@ body {
     background-image: url("data:image/svg+xml,%3Csvg width='8' height='11' viewBox='0 0 8 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M6.50008 0.500076L4.00008 3.00008L1.50008 0.500076C1.22393 0.223933 0.776218 0.223933 0.500076 0.500076C0.223933 0.776218 0.223933 1.22393 0.500075 1.50008L3.29297 4.29297C3.68349 4.68349 4.31666 4.68349 4.70718 4.29297L7.50008 1.50008C7.77622 1.22393 7.77622 0.776218 7.50008 0.500076C7.22393 0.223933 6.77622 0.223933 6.50008 0.500076ZM6.50008 6.50008L4.00008 9.00008L1.50008 6.50008C1.22393 6.22393 0.776218 6.22393 0.500076 6.50008C0.223933 6.77622 0.223933 7.22393 0.500075 7.50008L3.29297 10.293C3.68349 10.6835 4.31666 10.6835 4.70718 10.293L7.50008 7.50008C7.77622 7.22393 7.77622 6.77622 7.50008 6.50008C7.22393 6.22393 6.77622 6.22393 6.50008 6.50008Z' fill='%2341F6D7'/%3E%3C/svg%3E");
 }
 
+.block-title {
+    min-height: 55px;
+    margin: 0;
+    border-top: 1px solid #D9FFF5;
+    background: linear-gradient(270deg, #F8F8F8 0%, #FFFFFF 98.61%);
+    padding: 16px 16px;
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 24px;
+    color: #7E7E82;
+    text-transform: uppercase;
+}
+
+.block-swiper {
+    position: relative;
+    background: #f8f8f8;
+    min-height: 150px;
+    min-width: 320px;
+    box-sizing: border-box;
+    padding-bottom: 16px;
+}
+
+.swiper {
+    position: relative;
+    top: 16px;
+    margin-left: 16px !important;
+    width: 240px;
+    height: 72px;
+    border: 1px solid #EAEAEA;
+    border-radius: 5px;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+
+.swiper-slide--lenovo {
+    background: 16px url("img/Lenovo.svg") no-repeat;
+}
+
+.swiper-slide--samsung {
+    background: 16px url("img/Samsung.svg") no-repeat;
+}
+
+.swiper-slide--apple {
+    background: 16px url("img/Apple.svg") no-repeat;
+}
+
+.swiper-slide--sonic {
+    background: 16px url("img/ViewSonic.svg") no-repeat;
+}
+
+.swiper-slide--bosch {
+    background: 16px url("img/Bosch.svg") no-repeat;
+}
+
+.swiper-slide--hp {
+    background: 16px url("img/Hp.svg") no-repeat;
+}
+
+.swiper-slide--acer {
+    background: 16px url("img/Acer.svg") no-repeat;
+}
+
+.swiper-slide--sony {
+    background: 16px url("img/Sony.svg") no-repeat;
+}
+
+.swiper-slide__button {
+    position: absolute;
+    right: 1px;
+    width: 40px;
+    height: 40px;
+    margin: 16px 16px 16px auto;
+    background: url('img/go.svg') no-repeat;
+    z-index: 10;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #B5B6BC !important;
+    transform: scale(1.1);
+}
+
+.swiper-pagination {
+    text-align: start !important;
+    width: 14px;
+    height: 14px;
+    margin: 20px auto auto 55px;
+    position: static !important;
+}
+
+.swiper-desktop {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 24px 24px 0 8px;
+    min-width: 768px;
+    min-height: 150px;
+}
+
+.swiper-slide--desktop {
+    position: relative;
+    min-width: 240px;
+    height: 72px;
+    border: 1px solid #EAEAEA;
+    border-radius: 5px;
+    background-color: #fff;
+    box-sizing: border-box;
+    margin-left: 16px;
+    margin-bottom: 16px;
+}
+
+.swiper-slide--desktop-hidden {
+    display: none;
+}
+
+.swiper__spoiler {
+    margin: 0 0 0 40px !important;
+}
+
+.rotate {
+    transform: rotate(180deg);
+}
+
 @media screen and (min-width: 320px) and (max-width: 767px) {
     .navigation__divider--first {
         display: none;
@@ -178,6 +303,18 @@ body {
         margin-left: 16px;
         margin-right: 16px;
     }
+
+    .swiper-slide--hidden {
+        display: none;
+    }
+
+    .swiper__spoiler--hidden {
+        display: none;
+    }
+
+    .swiper-desktop {
+        display: none;
+    }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1119px) {
@@ -224,9 +361,31 @@ body {
     .content__picture {
         border-radius: 5px;
     }
+
+    .block-title {
+        padding-left: 24px;
+    }
+
+    .swiper-pagination,
+    .swiper {
+        display: none;
+    }
+
+    .block-swiper {
+        min-height: 266px;
+    }
+
+    .swiper-desktop>.swiper-slide--sony,
+    .swiper-desktop>.swiper-slide--sonic {
+        display: none;
+    }
 }
 
 @media screen and (min-width: 1119px) {
+    body {
+        width: 1120px;
+    }
+
     .header {
         display: none;
     }
@@ -299,5 +458,18 @@ body {
 
     .content__button--deck-hidden {
         display: none;
+    }
+
+    .block-title {
+        padding-left: 32px;
+    }
+
+    .swiper-pagination,
+    .swiper {
+        display: none;
+    }
+
+    .block-swiper {
+        min-height: 266px;
     }
 }
