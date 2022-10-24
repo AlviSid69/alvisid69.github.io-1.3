@@ -1,0 +1,36 @@
+.footer {
+  border-top: 1px solid $lightblue;
+  color: $subheader-color;
+  font-size: 0.875rem;
+  text-align: center;
+  @include mobile {
+    @include flex-between;
+    flex-direction: column;
+    padding: 16px 16px 19px;
+  }
+  @include tablet-desktop {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @include tablet {
+    padding: 32px 24px 25px;
+  }
+  @include desktop {
+    padding: 32px 32px 21px;
+  }
+  &__text {
+    @include tablet-desktop {
+      margin: 0;
+    }
+  }
+  &__link {
+    color: inherit;
+    text-decoration: none;
+    transition: $transition;
+    &:hover,
+    &:focus {
+      font-size: 1.04rem;
+      color: $pink;
+    }
+  }
+}

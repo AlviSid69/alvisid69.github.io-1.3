@@ -1,0 +1,49 @@
+.swiper-container {
+  position: relative;
+  overflow-x: clip;
+  &__swiper-wrapper {
+    @include tablet-desktop {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    @include tablet {
+      gap: 16px 24px;
+    }
+    @include desktop {
+      gap: 16px 32px;
+    }
+  }
+}
+
+.swiper-slide {
+  @include mobile {
+    max-width: 240px;
+  }
+  @include tablet {
+    max-width: 224px;
+  }
+  @include desktop {
+    max-width: 240px;
+  }
+}
+
+.swiper-container>.swiper-pagination {
+  position: static;
+  margin-top: 16px;
+  &>.swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    opacity: 1;
+    background-color: #DDDDDD;
+  }
+  &>.swiper-pagination-bullet-active {
+    background-color: #B5B6BC;
+  }
+}
+
+.swiper-wrapper--hidden {
+  @include tablet-desktop {
+    max-height: 160px;
+    overflow-y: hidden;
+  }
+}

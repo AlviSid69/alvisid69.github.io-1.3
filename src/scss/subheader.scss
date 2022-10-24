@@ -1,0 +1,22 @@
+.subheader {
+  color: $subheader-color;
+  font-family: $regular;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  border-top: 1px solid $lightblue;
+  background-color: white;
+  background-image: $gradient-subheader;
+  @include mobile {
+    margin-bottom: 16px;
+    padding: 16px;
+    padding-left: 0;
+  }
+  @include tablet {
+    margin-bottom: 24px;
+    padding: 16px 24px;
+  }
+  @include desktop {
+    margin-bottom: 24px;
+    padding: 16px 32px;
+  }
+}

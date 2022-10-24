@@ -1,0 +1,148 @@
+.left-menu {
+  &--show {
+    left: 0;
+  }
+  &__container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 0 24px 32px;
+    height: 100%;
+    background-color: $white;
+    @include mobile {
+      overflow-y: auto;
+    }
+  }
+  &__header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 18px 0;
+  }
+  &__button-close {
+    margin-right: 17px;
+    @include desktop {
+      display: none;
+    }
+  }
+  &__button-search {
+    @include btn_cirkle;
+    margin-left: auto;
+    background-image: url("../icons/icon_search.svg");
+    animation: button-color 2s linear both infinite;
+    animation-play-state: paused;
+    cursor: pointer;
+    &:hover,
+    &:active {
+      animation-play-state: running;
+    }
+  }
+  &__left-nav-list {
+    margin-bottom: 32px;
+  }
+  &__footer {
+    padding-bottom: 30px;
+    margin-top: auto;
+  }
+}
+
+.left-nav-list {
+  font-size: 1rem;
+  list-style: none;
+  &__item {
+    margin-bottom: 24px;
+  }
+  &__link.left-nav-list__link--active {
+    position: relative;
+    color: $subheader-color;
+    &::before {
+      content: "";
+      position: absolute;
+      left: -24px;
+      top: 0;
+      width: 0;
+      height: 32px;
+      border-left: 3px solid $blue;
+      border-radius: 0 10px 10px 0;
+    }
+  }
+  &__link {
+    display: block;
+    padding: 8px 0;
+    color: $text-color;
+    font-family: $medium;
+    text-decoration: none;
+    transition: $transition;
+  }
+}
+
+.left-menu-footer {
+  &__contacts {
+    margin-bottom: 40px;
+  }
+  &__lang-list {
+    display: flex;
+  }
+}
+
+.contacts {
+  &__buttons-list {
+    display: flex;
+    margin-bottom: 16px;
+    list-style: none;
+  }
+  &__mail,
+  &__tel {
+    display: block;
+    text-decoration: none;
+    color: $text-color;
+    &:hover,
+    &:active {
+      color: $pink;
+      transition: $transition;
+    }
+  }
+  &__mail {
+    margin-bottom: 12px;
+    font-family: $medium;
+    font-size: 1rem;
+  }
+  &__tel {
+    font-family: $bold;
+    font-size: 1.5rem;
+  }
+}
+
+.buttons-list {
+  &__btn {
+    transition: $transition;
+    cursor: pointer;
+    &:hover,
+    &:active {
+      background-color: $blue;
+      transform: scale(1.1);
+    }
+  }
+  &__btn-left-menu {
+    margin-right: 16px;
+    margin-left: 0;
+  }
+}
+
+.lang-list {
+  &__item {
+    list-style: none;
+  }
+  &__link {
+    display: block;
+    margin-right: 7px;
+    color: $text-color;
+    font-family: $medium;
+    font-size: 1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+  &__link.lang-list__link--active {
+    color: $subheader-color;
+  }
+}

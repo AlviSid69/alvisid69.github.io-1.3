@@ -1,0 +1,29 @@
+.button-show {
+  &__btn {
+    background-color: inherit;
+    border: none;
+    cursor: pointer;
+  }
+  &__arrow {
+    margin-right: 8px;
+  }
+  &__text {
+    font-size: 1rem;
+  }
+  &__close {
+    transform: scaleY(-1);
+    transition: $transition;
+  }
+}
+
+.button-close {
+  @include btn_cirkle;
+  background-image: url(../icons/icon-close.svg);
+  animation: button-color 2s linear both infinite;
+  animation-play-state: paused;
+  cursor: pointer;
+  &:hover,
+  &:active {
+    animation-play-state: running;
+  }
+}

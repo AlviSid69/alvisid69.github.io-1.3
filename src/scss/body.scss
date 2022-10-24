@@ -1,0 +1,84 @@
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+.body {
+  position: relative;
+  font-family: $medium;
+  color: $text-color;
+  overflow-x: hidden;
+  &__container {
+    @include desktop {
+      display: flex;
+      flex-direction: row-reverse;
+      max-width: 1440px;
+      margin: 0 auto;
+      position: relative;
+    }
+  }
+  &__left-menu {
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    transition: $transition;
+    @include mobile {
+      left: -100%;
+      width: 100vw;
+      z-index: 99;
+    }
+    @include tablet {
+      left: -100%;
+      width: 320px;
+      z-index: 5;
+      box-shadow: $box-shadow-left;
+    }
+    @include desktop {
+      position: sticky;
+      left: 0;
+      width: 306px;
+      z-index: 4;
+    }
+  }
+  &__feedback {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    z-index: 99;
+    @include mobile {
+      width: 100vw;
+      overflow-y: auto;
+      transition: all 400ms linear;
+    }
+    @include tablet-desktop {
+      width: 440px;
+      box-shadow: $box-shadow-right;
+      transition: $transition;
+    }
+  }
+  &__overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    z-index: -3;
+    background-color: $white;
+    transition: $transition;
+    &--show {
+      opacity: 0.96;
+      z-index: 4;
+    }
+  }
+}
+
+.container__inner {
+  background-color: $main-color;
+  @include desktop {
+    max-width: 1120px;
+  }
+}

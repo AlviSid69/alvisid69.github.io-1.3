@@ -1,0 +1,65 @@
+.link-service {
+  @include mobile {
+    position: relative;
+    padding-bottom: 4px;
+    padding-left: 16px;
+  }
+  @include tablet-desktop {
+    flex-wrap: wrap;
+    gap: 16px 24pxs;
+  }
+  @include tablet {
+    padding-bottom: 32px;
+  }
+  @include desktop {
+    padding-bottom: 50px;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 62px;
+    width: 24px;
+    height: 166px;
+    z-index: 99;
+    background-image: $gradient-fade;
+  }
+  &__swiper-container {
+    z-index: 0;
+    @include tablet {
+      padding-left: 24px;
+    }
+    @include desktop {
+      padding-left: 32px;
+    }
+  }
+  &__swiper-link {
+    display: flex;
+  }
+  &__button-show {
+    @include mobile {
+      display: none;
+    }
+    @include tablet-desktop {
+      margin-top: 24px;
+    }
+  }
+}
+
+.swiper-slide {
+  &__link-service-slide {
+    box-sizing: border-box;
+    display: block;
+    padding: 16px;
+    width: 240px;
+    height: 160px;
+    color: $text-color;
+    font-family: $medium;
+    font-size: 1rem;
+    text-decoration: none;
+    background: $white url(../icons/arrow_link.svg) bottom 16px right 16px no-repeat;
+    @include tablet {
+      width: 224px;
+    }
+  }
+}

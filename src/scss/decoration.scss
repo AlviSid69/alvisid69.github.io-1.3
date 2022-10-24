@@ -1,0 +1,11 @@
+@keyframes button-color {
+  33% {
+    background-color: radial-gradient(circle #FF3E79 #41F6D7);
+  }
+  66% {
+    background-color: #41F6D7;
+  }
+  100% {
+    background-color: radial-gradient(circle #41F6D7 #FF3E79);
+  }
+}

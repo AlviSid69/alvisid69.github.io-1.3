@@ -1,0 +1,66 @@
+.link-brend {
+  position: relative;
+  @include mobile {
+    padding-left: 16px;
+  }
+  @include tablet {
+    padding-bottom: 32px;
+  }
+  @include desktop {
+    padding-bottom: 50px;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 81px;
+    right: 0;
+    top: 75px;
+    z-index: 99;
+    background-image: $gradient-fade;
+  }
+  &__swiper-container {
+    @include tablet {
+      padding: 16px 24px 0;
+      z-index: 0;
+    }
+    @include desktop {
+      padding: 16px 32px 0;
+    }
+  }
+  &__button-show {
+    @include mobile {
+      display: none;
+    }
+    @include tablet-desktop {
+      margin-top: 24px;
+    }
+    @include tablet {
+      margin-left: 24px;
+    }
+    @include desktop {
+      margin-left: 32px;
+    }
+  }
+}
+
+.swiper-slide {
+  &__brend-link {
+    display: flex;
+    box-sizing: border-box;
+    width: 240px;
+    height: 72px;
+    padding: 0 16px;
+    background: url(../icons/arrow_link.svg) no-repeat center right 16px, #fff;
+    border: 1px solid #EAEAEA;
+    border-radius: 6px;
+    @include tablet {
+      width: 224px;
+    }
+  }
+  &__brend-img {
+    display: block;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+}

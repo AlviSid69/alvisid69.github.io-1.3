@@ -1,0 +1,60 @@
+.article {
+  @include tablet-desktop {
+    @include flex-between;
+  }
+  @include tablet {
+    padding: 0 24px 32px;
+  }
+  @include desktop {
+    padding: 0 32px 51px;
+  }
+  &__wrapper {
+    @include mobile {
+      padding: 0 16px;
+    }
+  }
+  &__inner-text {
+    overflow-y: auto;
+  }
+  &__text {
+    font-size: 0.875rem;
+    line-height: 1.43em;
+    &:first-child {
+      margin-top: 0;
+    }
+    &--hidden {
+      display: none
+    }
+  }
+  &__img {
+    @include mobile {
+      width: 100%;
+      margin-bottom: 24px;
+    }
+    @include tablet {
+      max-width: 360px;
+      max-height: 208px;
+      margin-left: 48px;
+    }
+    @include desktop {
+      max-width: 530px;
+      max-height: 385px;
+      margin-left: 36px;
+    }
+  }
+  &__article-button {
+    margin-bottom: 16px;
+    background-color: inherit;
+    border: none;
+    cursor: pointer;
+  }
+}
+
+.article-button {
+  &__icon {
+    margin-right: 8px;
+  }
+  &__text {
+    font-size: 0.875rem;
+  }
+}
